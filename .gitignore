@@ -1,0 +1,18 @@
+# ignore env
+.env
+
+# ignore dependencies
+node_modules/
+
+# ignore logs
+npm-debug.log*
+
+
+
+
+
+
+
+
+
+

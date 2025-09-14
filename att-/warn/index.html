@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>message</title>
+<style>
+  /* full page reset */
+  html,body { height:100%; margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; }
+
+  /* container that holds bg and content */
+  .page {
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+  }
+
+  /* background image (or whatever you want behind) */
+  .bg {
+    position:absolute;
+    inset:0;
+    background-image: url('atbanner.png');
+    background-size:cover;
+    background-position:center;
+    transform:scale(1.05); /* avoid edge artifact when blurring */
+    filter: blur(6px) saturate(1.05);
+  -webkit-filter: blur(6px) saturate(1.05);
+  }
+
+  /* optional overlay to dim the bg */
+  .bg::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background: rgba(0,0,0,0.25);
+    pointer-events:none;
+  }
+
+  /* center area for message */
+  .card {
+    position:relative;
+    z-index:10;
+    width:min(420px, 86%);
+    margin:0 auto;
+    top:50%;
+    transform:translateY(-50%);
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius:14px;
+    box-shadow:0 10px 30px rgba(10,10,10,0.18);
+    padding:22px;
+    text-align:left;
+  }
+
+  .card h1 { margin:0 0 8px 0; font-size:18px; }
+  .card p { margin:0 0 14px 0; color:#333; line-height:1.4; }
+  .card .actions { display:flex; gap:8px; justify-content:flex-end; }
+  .btn {
+    appearance:none;
+    border:0;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+  }
+  .btn.primary { background:#0574AC; color:white; }
+  .btn.ghost { background:transparent; color:#0574AC; border:1px solid rgba(11,116,255,0.12); }
+
+  /* accessibility: prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    .card { transition:none; transform:none; top:50%; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="bg" aria-hidden="true"></div>
+
+    <div class="card" role="dialog" aria-labelledby="msg-title" aria-describedby="msg-body">
+      <h1 id="msg-title">Security Alert</h1>
+      <p id="msg-body">We noticed a suspicious attempt to access your email from a new device.
+For your protection, please review this activity now.</p>
+      <div class="actions">
+        <button class="btn ghost" onclick="alert('cancel')">Cancel</button>
+        <button class="btn primary" onclick="window.open('https://your-link.com','_blank');">  Review</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
